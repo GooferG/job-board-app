@@ -1,7 +1,7 @@
-import NextAuth from 'next-auth'
-import EmailProvider from 'next-auth/providers/email'
-import { PrismaAdapter } from '@next-auth/prisma-adapter'
-import prisma from 'lib/prisma'
+import NextAuth from 'next-auth';
+import EmailProvider from 'next-auth/providers/email';
+import { PrismaAdapter } from '@next-auth/prisma-adapter';
+import prisma from 'lib/prisma';
 
 export default NextAuth({
   providers: [
@@ -24,11 +24,11 @@ export default NextAuth({
 
   callbacks: {
     session: async ({ session, user }) => {
-      session.user.id = user.id
-      session.user.image = user.image
-      session.user.username = user.username
-      session.user.name = user.name
-      return Promise.resolve(session)
+      session.user.id = user.id;
+      session.user.image = user.image;
+      session.user.username = user.username;
+      session.user.name = user.name;
+      return Promise.resolve(session);
     },
   },
-})
+});
