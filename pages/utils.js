@@ -54,7 +54,7 @@ export default function Utils() {
             });
           }}
         >
-          Generate 1 new job
+          Generate 1 new jobs
         </button>
       </div>
     </div>
