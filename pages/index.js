@@ -1,8 +1,10 @@
 import prisma from 'lib/prisma';
 import { getJobs } from 'lib/data';
 import Jobs from 'components/Jobs';
+import { useSession } from 'next-auth/react';
 
 export default function Home({ jobs }) {
+  const { data: session, status } = useSession();
   return (
     <div className="mt-10">
       <div className="text-center p-4 m-4">
